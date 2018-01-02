@@ -24,9 +24,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0003
-#define MANUFACTURER    SATAN
-#define PRODUCT         GH60
-#define DESCRIPTION     QMK keyboard firmware for Satan GH60 with WS2812 support
+#define MANUFACTURER    Gregory Eremin
+#define PRODUCT         GH60 Satan
+#define DESCRIPTION     Powered by QMK
 
 /* key matrix size */
 #define MATRIX_ROWS 5
