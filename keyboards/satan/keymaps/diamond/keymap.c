@@ -1,6 +1,5 @@
 #include "satan.h"
 
-
 // Used for SHIFT_ESC
 #define MODS_CTRL_MASK  (MOD_BIT(KC_LSHIFT)|MOD_BIT(KC_RSHIFT))
 
@@ -38,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_FL] = KEYMAP_ANSI(
   KC_GRV,      KC_F1,        KC_F2,          KC_F3,      KC_F4,      KC_F5,    KC_F6,    KC_F7,    KC_F8,       KC_F9,      KC_F10,      KC_F11,      KC_F12,     KC_DEL,  \
-  PH(KC_TAB),  LGUI(KC_GRV), LGUI(KC_TILDE), PH(KC_E),   PH(KC_R),   PH(KC_T), PH(KC_Y), PH(KC_U), KC_UP,       PH(KC_O),   PH(KC_P),    KC_VOLD,     KC_VOLU,    KC_MUTE, \
+  KC_LALT,     LGUI(KC_GRV), LGUI(KC_TILDE), PH(KC_E),   PH(KC_R),   PH(KC_T), PH(KC_Y), PH(KC_U), KC_UP,       PH(KC_O),   PH(KC_P),    KC_VOLD,     KC_VOLU,    KC_MUTE, \
   _______,     PH(KC_A),     PH(KC_S),       PH(KC_D),   PH(KC_F),   PH(KC_G), PH(KC_H), KC_LEFT,  KC_DOWN,     KC_RIGHT,   PH(KC_SCLN), PH(KC_QUOT), PH(KC_ENT), \
   PH(KC_LSFT), LGUI(KC_Z),   LGUI(KC_X),     LGUI(KC_C), LGUI(KC_V), PH(KC_B), PH(KC_N), PH(KC_M), KC_MRWD,     KC_MPLY,    KC_MFFD,     PH(KC_RSFT), \
   _______,     PH(KC_LCTL),  PH(KC_LGUI),                PH(KC_SPC),                               PH(KC_RALT), _______,    _______,     _______ ),
