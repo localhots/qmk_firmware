@@ -11,7 +11,8 @@
 #define _BL 0
 #define _FL 1
 
-#define _______ KC_TRNS
+#define _______  KC_TRNS
+#define PH(code) KC_TRNS
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Keymap _BL: (Base Layer) Default Layer
@@ -34,33 +35,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LSFT,         KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,         KC_RSFT, \
   _______, KC_LCTL,KC_LGUI,                KC_SPC,                                 KC_RALT,MO(_FL), MO(_FL),_______),
 
-  /* Keymap _FL: Function Layer
-   * ,-----------------------------------------------------------.
-   * |   |   |   |   |   |   |   |   |   |   |   |   |   |  RESET|
-   * |-----------------------------------------------------------|
-   * |     |   |   |   |   |   |   |   |   |   |   |BL-|BL+|BL   |
-   * |-----------------------------------------------------------|
-   * |      |   |   |   |   |   |   |       |   |   |   |        |
-   * |-----------------------------------------------------------|
-   * |        | F1|F2 | F3|F4 | F5| F6| F7| F8|   |   |          |
-   * |-----------------------------------------------------------|
-   * |XXXXX|Ctrl| Cmd |                      | Alt | Fn |Fn|XXXXX|
-   * `-----------------------------------------------------------'
-   */
+
 [_FL] = KEYMAP_ANSI(
-  #ifdef RGBLIGHT_ENABLE
-  KC_GRV, _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,RESET,  \
-  _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______, BL_DEC,BL_INC, BL_TOGG, \
-  _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,        _______, \
-  _______,RGB_TOG,RGB_MOD,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,_______,_______,_______, \
-  _______,_______,_______,                 _______,                       _______,_______,_______, _______),
-  #else
-  KC_GRV, KC_F1  ,KC_F2  ,KC_F3  ,KC_F4  ,KC_F5  ,KC_F6  ,KC_F7  ,KC_F8  ,KC_F9  ,KC_F10 ,KC_F11 ,KC_F12 ,_______,  \
-  _______,LGUI(KC_GRV),LGUI(KC_TILDE),_______,_______,_______,_______,_______,KC_UP  ,_______,_______,_______,_______,_______, \
-  _______,_______,_______,_______,_______,_______,_______,KC_LEFT,KC_DOWN,KC_RIGHT,_______,_______,_______, \
-  _______,LGUI(KC_Z),LGUI(KC_X),LGUI(KC_C),LGUI(KC_V),_______,_______,_______,_______,_______,_______,_______, \
-  _______,_______,_______,                _______,                        _______,_______,_______,_______),
-  #endif
+  KC_GRV,      KC_F1,        KC_F2,          KC_F3,      KC_F4,      KC_F5,    KC_F6,    KC_F7,    KC_F8,       KC_F9,      KC_F10,      KC_F11,      KC_F12,     KC_DEL,  \
+  PH(KC_TAB),  LGUI(KC_GRV), LGUI(KC_TILDE), PH(KC_E),   PH(KC_R),   PH(KC_T), PH(KC_Y), PH(KC_U), KC_UP,       PH(KC_O),   PH(KC_P),    KC_VOLD,     KC_VOLU,    KC_MUTE, \
+  _______,     PH(KC_A),     PH(KC_S),       PH(KC_D),   PH(KC_F),   PH(KC_G), PH(KC_H), KC_LEFT,  KC_DOWN,     KC_RIGHT,   PH(KC_SCLN), PH(KC_QUOT), PH(KC_ENT), \
+  PH(KC_LSFT), LGUI(KC_Z),   LGUI(KC_X),     LGUI(KC_C), LGUI(KC_V), PH(KC_B), PH(KC_N), PH(KC_M), KC_MRWD,     KC_MPLY,    KC_MFFD,     PH(KC_RSFT), \
+  _______,     PH(KC_LCTL),  PH(KC_LGUI),                PH(KC_SPC),                               PH(KC_RALT), _______,    _______,     _______ ),
 };
 
 enum function_id {
@@ -68,7 +49,7 @@ enum function_id {
 };
 
 const uint16_t PROGMEM fn_actions[] = {
-  [0]  = ACTION_FUNCTION(SHIFT_ESC),
+  [0] = ACTION_FUNCTION(SHIFT_ESC),
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt) {
