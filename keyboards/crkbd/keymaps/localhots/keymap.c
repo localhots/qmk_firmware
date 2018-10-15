@@ -83,11 +83,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-        ESC,   GRV,     1,     2,     3, XXXXX,                  XXXXX, XXXXX,    UP, XXXXX, XXXXX,   DEL,\
+        ESC,  TILD,     1,     2,     3,  AMPR,                   MINS,  LCBR,  RCBR,  HASH,    AT,   DEL,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB,  TILD,     4,     5,     6,     0,                  XXXXX,  LEFT,  DOWN, RIGHT, XXXXX, XXXXX,\
+      CTLTB,   GRV,     4,     5,     6,     0,                   UNDS,  LPRN,  RPRN,  EXLM,   DLR, XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT, XXXXX,     7,     8,     9, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX,  BSLS,  PIPE,\
+       LSFT,  CIRC,     7,     8,     9,  PLUS,                    EQL,  LBRC,  RBRC,  PERC,  ASTR, XXXXX,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                   GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
                               //`--------------------'  `--------------------'
@@ -95,11 +95,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_RAISE] = LAYOUT_kc( \
   //,-----------------------------------------.                ,-----------------------------------------.
-        ESC,  EXLM,    AT,  LCBR,  RCBR,  UNDS,                   AMPR, XXXXX, XXXXX, XXXXX, XXXXX,  BSPC,\
+        ESC, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX, XXXXX,    UP, XXXXX, XXXXX,   DEL,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-      CTLTB,  HASH,   DLR,  LPRN,  RPRN,  MINS,                   PLUS, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+      CTLTB,  LSFT,  LCTL,  LALT,  LGUI, XXXXX,                  XXXXX,  LEFT,  DOWN, RIGHT, XXXXX, XXXXX,\
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-       LSFT,  PERC,  CIRC,  LBRC,  RBRC,   EQL,                   ASTR, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,\
+       LSFT, XXXXX, XXXXX, XXXXX, XXXXX, XXXXX,                  XXXXX, XXXXX, XXXXX, XXXXX,  BSLS,  PIPE,\
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                   GUIEI, LOWER,   SPC,      ENT, RAISE, ALTKN \
                               //`--------------------'  `--------------------'
